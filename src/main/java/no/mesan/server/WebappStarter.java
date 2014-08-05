@@ -8,8 +8,8 @@ public class WebappStarter {
         final Server server = new Server(8080);
 
         final WebAppContext context = new WebAppContext();
-        context.setDescriptor("./src/main/webapp/WEB-INF/web.xml");
-        context.setResourceBase("./src/main/webapp");
+        context.setDescriptor(ClassLoader.getSystemResource("WEB-INF/web.xml").toExternalForm());
+        context.setResourceBase(ClassLoader.getSystemResource("public").toExternalForm());
         context.setContextPath("/");
         context.setParentLoaderPriority(true);
         server.setHandler(context);
