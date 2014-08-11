@@ -3,6 +3,10 @@
         <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
     </listener>
 
+    <listener>
+       <listener-class>org.jboss.weld.environment.servlet.BeanManagerResourceBindingListener</listener-class>
+    </listener>
+
     <resource-env-ref>
         <resource-env-ref-name>BeanManager</resource-env-ref-name>
         <resource-env-ref-type>
